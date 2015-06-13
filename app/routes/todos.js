@@ -7,13 +7,11 @@ export default Ember.Route.extend({
 
     actions: {
         createTodo: function(newTitle) {
+            // Create the new todo model
             var todo = this.store.createRecord('todo', {
                 title: newTitle,
                 isComplete: false
             });
-
-            // Clear the 'New Todo' text field
-            this.controllerFor('todos').set(newTitle, '');
 
             // Save the new model
             todo.save();
