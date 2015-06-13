@@ -2,11 +2,7 @@
     value=newTitle action="createTodo"}}
 
 <section id="main">
-    <ul id="todo-list">
-        {{#each todo in model}}
-            {{todo-item acceptChanges="acceptChanges" deleteTodo="deleteTodo" todo=todo}}
-        {{/each}}
-    </ul>
+    {{outlet}}
 
     <input type="checkbox" id="toggle-all">
 </section>
